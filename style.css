@@ -272,6 +272,10 @@ nav .btn-close:focus{
   margin-bottom: 86px;
 }
 
+.mybtn2:hover{
+	color:#fff;
+}
+
 .cardspace{
   padding:35px 15px 41px 15px;
 }
