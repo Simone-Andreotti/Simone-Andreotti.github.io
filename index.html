@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+
+    <title>Omron test</title>
+  </head>
+
+  <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <nav class="container-fluid fixed-top mobilepadding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 col-3 offset-5 navalign">
+            <a class="navbar-brand" href="#">
+              <svg width="116" height="30" viewBox="0 0 116 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.0444 15.759H2.32607L0.203343 24.4421C0.203343 24.4421 -1.11795 29.9556 2.97589 29.9556H16.6004L17.5534 25.9823H5.20692C5.20692 25.9823 4.62209 26.0716 4.83869 25.1341C5.0553 24.1966 6.03002 20.3796 6.03002 20.3796H14.5209C14.5426 20.3796 18.9397 20.3796 20.0444 15.759Z" fill="#66B7E1"/>
+                <path d="M36.7229 29.9557L39.1922 19.8663C39.1922 19.8663 40.0153 15.7368 45.3222 15.7591C50.629 15.7814 55.0044 15.7591 55.0044 15.7591L53.8348 20.3574H46.4269C46.4269 20.3574 43.546 20.0672 42.8312 22.9467C42.0731 25.9601 41.2067 29.9557 41.2067 29.9557H36.7229Z" fill="#66B7E1"/>
+                <path d="M95.8561 29.9556L99.2785 15.759H111.495C115.134 15.759 116.304 19.6653 115.935 21.2055C115.416 23.3484 113.813 29.9556 113.813 29.9556H109.329L111.105 22.7011C111.105 22.7011 111.43 20.3796 109.242 20.3573C107.055 20.335 103.026 20.3573 103.026 20.3573L100.708 29.9556H95.8561Z" fill="#66B7E1"/>
+                <path d="M43.9792 0H48.4629C48.4629 0 47.0117 6.07148 46.5568 7.76792C46.1019 9.46437 47.5532 9.35276 47.5532 9.35276H56.5423L55.351 14.2189H46.9034C43.2211 14.2189 41.5749 10.0894 41.8998 8.66079C42.2247 7.25453 43.9792 0 43.9792 0Z" fill="#66B7E1"/>
+                <path d="M77.4014 29.9556H89.5096C93.4085 29.9556 95.5096 28.4824 96.0511 25.9823C96.5926 23.4823 98.4987 15.759 98.4987 15.759H83.5963C83.5963 15.759 80.4988 15.759 79.6974 19.3305C79.6974 19.3751 92.867 19.3305 92.867 19.3305L92.4554 21.0046H83.0548C83.0548 21.0046 79.6107 20.8707 78.831 23.9957C78.0295 27.0761 77.4014 29.9556 77.4014 29.9556ZM91.524 24.8439C91.524 24.8439 91.3507 26.518 90.441 26.518H82.9465C82.9465 26.518 83.1631 24.8216 84.0728 24.8439C84.9825 24.8886 91.524 24.8439 91.524 24.8439Z" fill="#66B7E1"/>
+                <path d="M42.5713 0L40.1236 10.1117C40.1236 10.1117 39.3438 14.2189 34.037 14.1965C28.7302 14.1742 24.3548 14.1965 24.3548 14.1965L25.5677 9.35276H32.9323C32.9323 9.35276 35.7699 9.66526 36.4413 6.96434C37.1994 3.95093 38.0875 0 38.0875 0H42.5713V0Z" fill="#66B7E1"/>
+                <path d="M53.2282 29.9554L56.6723 15.7589H64.665C64.665 15.7589 66.6578 15.5803 67.3942 17.366L67.8491 15.7589H73.7191C76.5783 15.7589 78.8526 18.683 78.1162 21.6741C77.3797 24.6652 76.1234 29.9554 76.1234 29.9554H71.5964L73.3075 23.2589C73.3075 23.2589 74.0873 20.3794 71.9429 20.3794H69.4953L67.2209 29.9777H62.4123L64.0368 23.3259C64.0368 23.3259 64.7733 20.4018 62.7155 20.4018H59.943L57.647 30.0001H53.2282V29.9554Z" fill="#66B7E1"/>
+                <path d="M21.1707 15.759H33.9287C33.9287 15.759 38.759 15.759 37.4377 21.1162C36.3331 25.6252 35.315 29.9556 35.315 29.9556H21.9071C18.7664 29.9556 18.5498 26.4511 18.918 24.9109C19.7628 21.5403 21.1707 15.759 21.1707 15.759ZM31.8493 25.9823L33.2573 20.3796H24.9613L23.5967 25.9823H31.8493Z" fill="#66B7E1"/>
+              </svg>
+            </a>
+          </div>
+          <div class="col-1 offset-md-4 offset-2">
+
+            <button class="btn menubtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="13" y1="14" x2="33" y2="14" stroke="#035EB8" stroke-width="2"/>
+              <line x1="13" y1="22" x2="33" y2="22" stroke="#035EB8" stroke-width="2"/>
+              <line x1="13" y1="30" x2="33" y2="30" stroke="#035EB8" stroke-width="2"/>
+              </svg>
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              
+              <div class="offcanvas-header closealign">
+                <button type="button" class="btn-close text-reset closeposition" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <nav class="nav flex-col-mdumn">
+                  <a class="nav-link" href="#">
+                    <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <span class="menutext">Garanzia e Assistenza</span>
+                      </li>
+                      <li class="list-group-item">
+                        <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9.92388 9.96191L10.631 10.669C11.0215 10.2785 11.0215 9.64533 10.631 9.25481L9.92388 9.96191ZM0.254834 1.70708L9.21677 10.669L10.631 9.25481L1.66905 0.292867L0.254834 1.70708ZM9.21677 9.25481L0.254834 18.2167L1.66905 19.631L10.631 10.669L9.21677 9.25481Z" fill="#035EB8"/>
+                        </svg>
+                     </li> 
+                    </ul>
+                  </a>
+                  <hr>
+                  <a class="nav-link" href="#">
+                    <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <span class="menutext">Prodotti Omron</span>
+                      </li>
+                      <li class="list-group-item">
+                          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.92388 9.96191L10.631 10.669C11.0215 10.2785 11.0215 9.64533 10.631 9.25481L9.92388 9.96191ZM0.254834 1.70708L9.21677 10.669L10.631 9.25481L1.66905 0.292867L0.254834 1.70708ZM9.21677 9.25481L0.254834 18.2167L1.66905 19.631L10.631 10.669L9.21677 9.25481Z" fill="#035EB8"/>
+                          </svg>
+                      </li>
+                    </ul>
+                  </a>
+                  <hr>
+                  <a class="nav-link" href="#">
+                    <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <span class="menutext">Domande Frequenti</span>
+                      </li>
+                      <li class="list-group-item">
+                          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.92388 9.96191L10.631 10.669C11.0215 10.2785 11.0215 9.64533 10.631 9.25481L9.92388 9.96191ZM0.254834 1.70708L9.21677 10.669L10.631 9.25481L1.66905 0.292867L0.254834 1.70708ZM9.21677 9.25481L0.254834 18.2167L1.66905 19.631L10.631 10.669L9.21677 9.25481Z" fill="#035EB8"/>
+                          </svg>
+                      </li>
+                    </ul>
+                  </a>
+                  <hr>
+                  <a class="nav-link" href="#">
+                    <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <span class="menutext">Contatti</span>
+                      </li>
+                      <li class="list-group-item">
+                          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.92388 9.96191L10.631 10.669C11.0215 10.2785 11.0215 9.64533 10.631 9.25481L9.92388 9.96191ZM0.254834 1.70708L9.21677 10.669L10.631 9.25481L1.66905 0.292867L0.254834 1.70708ZM9.21677 9.25481L0.254834 18.2167L1.66905 19.631L10.631 10.669L9.21677 9.25481Z" fill="#035EB8"/>
+                          </svg>
+                      </li>
+                    </ul>
+                  </a>
+                  <hr>
+                  <a class="nav-link" href="#">
+                    <ul class="list-group list-group-horizontal">
+                      <li class="list-group-item">
+                        <span class="menutext">REGISTRAZIONE</span>
+                      </li>
+                      <li class="list-group-item">
+                          <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.92388 9.96191L10.631 10.669C11.0215 10.2785 11.0215 9.64533 10.631 9.25481L9.92388 9.96191ZM0.254834 1.70708L9.21677 10.669L10.631 9.25481L1.66905 0.292867L0.254834 1.70708ZM9.21677 9.25481L0.254834 18.2167L1.66905 19.631L10.631 10.669L9.21677 9.25481Z" fill="#035EB8"/>
+                          </svg>
+                      </li>
+                    </ul>
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container spacetop">
+      <div class="row">
+        <div class="col-md-6 col-12 g-5 mobilealign">
+          <p class="titoletto">garanzia e assistenza</p>
+          <p class="titolo">Estendi la garanzia: attiva l’assistenza Corman</p>
+          <p class="testo textborder">Registra il tuo prodotto Omron e attiva gratuitamente servizi aggiuntivi</p>
+
+          <p class="titoletto-mobile">garanzia e assistenza</p>
+          <p class="titolo-mobile">Attiva l’assistenza Corman</p>
+          <p class="testo-mobile">Registra il tuo prodotto Omron e attiva gratuitamente il servizio di presa e
+                                             riconsegna gratuita a domicilio del prodotto</p>
+          <a href="#" class="btn btn-primary btn-lg active mybtn" role="button">registra un prodotto</a>
+        </div>
+        <div class="col-md-6 col-12">
+          <img src="img/prima.png" alt="prodotti" width="100%">
+        </div>
+      </div>
+
+      <div class="row rowmargin">
+        <div class="col-md-6 g-5">
+          <p class="titolo2 mobile-textalign">Garanzia e assistenza</p>
+          <p class="testo1 textborder">Il tuo prodotto Omron è coperto da una garanzia di tre anni 
+            a partire dalla data di acquisto.<br> Registrandolo qua e ora, potrai <span class="testo1-blu">attivare 
+            senza alcun costo l’assistenza Corman</span><span class="desktop-visibile-text">,</span> assicurandoti, in caso di necessità, 
+            il servizio<span class="desktop-nascosto-text"> esclusivo</span> di presa e riconsegna gratuita a domicilio.
+          </p>
+        </div>
+        <div class="col-md-6 g-5 bottomright">
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">
+              <span class="testo2">scopri tutti i vantaggi</span>
+            </li>
+            <li class="list-group-item">
+              <a href="#">
+                <div class="arrow desktop-visibile-item">
+                  <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.875 1.51245L10.5375 11L1.875 20.4875" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                  </svg>
+                </div>
+                <div class="arrow desktop-nascosto-item">
+                  <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2L8 9L2 16" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                  </svg>                    
+                </div>
+              </a>
+            </li>
+          </ul>      
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row imagebox">
+        <div class="col-md-12 ">
+          <div class="container mobile-fullwidth">
+            <div class="row topmargin imageboxinner">
+
+              <div class="container-fluid">
+                <div class="row mobile-scrollable">
+                <div class="col-md-2 offset-md-2 col-5 order-1">
+                  <a href="#">
+                    <img  src="img/gruppo1.png" alt="respiratore">
+                  </a>
+                </div>
+                <div class="col-md-2 col-5 order-2">
+                  <a href="#">
+                    <img  src="img/gruppo2.png" alt="misuratore pressione">
+                  </a>
+                </div>
+                <div class="col-md-2 col-5 order-3">
+                  <a href="#">
+                    <img  src="img/gruppo3.png" alt="bilancia">
+                  </a>
+                </div>
+                <div class="col-md-2 col-5 order-4">
+                  <a href="#">
+                    <img  src="img/gruppo4.png" alt="termometro">
+                  </a>
+                </div>
+              </div>
+              </div>
+
+            
+              <div class="col-md-12 order-first order-md-5">
+                <p class="titolobianco">Quali prodotti Omron puoi registrare?</p>
+              </div>
+
+              <div class="col-md-12 order-last centered ">
+                <a href="#" class="mybtn2">
+                  <span >scopri tutti i prodotti</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row cardtopbottomspace">
+        <div class="col-md-6 cardspace">
+          <div class="row imgbox1 ratio" style="--bs-aspect-ratio: 50%;">
+            <div class="col-md-12 g-4 noratio">
+              <p class="titolo2">Ecco le risposte che stai cercando</p>
+            </div>
+            <div class="col-md-12 bottomright mobile-margin">
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">
+                  <span class="testo2">vai alle faq</span>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <div class="arrow desktop-visibile-item">
+                      <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.875 1.51245L10.5375 11L1.875 20.4875" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                      </svg>
+                    </div>
+                    <div class="arrow desktop-nascosto-item">
+                      <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L8 9L2 16" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                      </svg>                    
+                    </div>
+                  </a>
+                </li>
+              </ul>      
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 cardspace">
+          <div class="row imgbox2  ratio" style="--bs-aspect-ratio: 50%;">
+            <div class="col-md-12 g-4 noratio">
+              <p class="titolo2">Hai dei dubbi?<br>Siamo qua per risponderti</p>
+            </div>
+            <div class="col-md-12 bottomright mobile-margin">
+              <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">
+                  <span class="testo2">contattaci subito</span>
+                </li>
+                <li class="list-group-item">
+                  <a href="#">
+                    <div class="arrow desktop-visibile-item">
+                      <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.875 1.51245L10.5375 11L1.875 20.4875" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                      </svg>
+                    </div>
+                    <div class="arrow desktop-nascosto-item">
+                      <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L8 9L2 16" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                      </svg>                    
+                    </div>
+                  </a>
+                </li>
+              </ul>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid footer1">
+      <div class="container">
+        <div class="row footerspace">
+          <div class="col-md-2 col-12 mobile-footer-logo order-1">
+            <svg width="153" height="39" viewBox="0 0 153 39" fill="none" xmlns="http://www.w3.org/2000/svg" class="bottomspace">
+              <path d="M26.4378 20.17H3.06799L0.268183 31.2835C0.268183 31.2835 -1.47455 38.3402 3.92507 38.3402H21.8953L23.1523 33.2548H6.86773C6.86773 33.2548 6.09635 33.3691 6.38205 32.1692C6.66774 30.9692 7.95337 26.0839 7.95337 26.0839H19.1526C19.1812 26.0839 24.9808 26.0839 26.4378 20.17Z" fill="white"/>
+              <path d="M48.4364 38.3403L51.6934 25.4269C51.6934 25.4269 52.779 20.1415 59.7785 20.1701C66.778 20.1987 72.5491 20.1701 72.5491 20.1701L71.0063 26.0554H61.2356C61.2356 26.0554 57.4358 25.684 56.493 29.3695C55.4931 33.2263 54.3503 38.3403 54.3503 38.3403H48.4364Z" fill="white"/>
+              <path d="M126.431 38.3402L130.945 20.17H147.058C151.858 20.17 153.401 25.1696 152.915 27.1409C152.229 29.8836 150.115 38.3402 150.115 38.3402H144.201L146.544 29.0551C146.544 29.0551 146.972 26.0839 144.087 26.0553C141.201 26.0267 135.887 26.0553 135.887 26.0553L132.831 38.3402H126.431Z" fill="white"/>
+              <path d="M58.0069 0H63.9208C63.9208 0 62.0066 7.7709 61.4067 9.94218C60.8067 12.1135 62.7209 11.9706 62.7209 11.9706H74.5772L73.0059 18.1988H61.8638C57.007 18.1988 54.8357 12.9134 55.2642 11.085C55.6928 9.28508 58.0069 0 58.0069 0Z" fill="white"/>
+              <path d="M102.089 38.3402H118.06C123.202 38.3402 125.973 36.4546 126.688 33.2548C127.402 30.055 129.916 20.17 129.916 20.17H110.26C110.26 20.17 106.175 20.17 105.118 24.7411C105.118 24.7982 122.488 24.7411 122.488 24.7411L121.945 26.8838H109.546C109.546 26.8838 105.004 26.7124 103.975 30.7121C102.918 34.6547 102.089 38.3402 102.089 38.3402ZM120.717 31.7978C120.717 31.7978 120.488 33.9405 119.288 33.9405H109.403C109.403 33.9405 109.689 31.7692 110.889 31.7978C112.089 31.8549 120.717 31.7978 120.717 31.7978Z" fill="white"/>
+              <path d="M56.1499 0L52.9216 12.942C52.9216 12.942 51.8931 18.1988 44.8935 18.1702C37.894 18.1416 32.123 18.1702 32.123 18.1702L33.7229 11.9706H43.4365C43.4365 11.9706 47.1791 12.3706 48.0648 8.91368C49.0647 5.0568 50.236 0 50.236 0H56.1499V0Z" fill="white"/>
+              <path d="M70.2057 38.34L74.7483 20.1698H85.2904C85.2904 20.1698 87.9188 19.9412 88.8902 22.2268L89.4901 20.1698H97.2325C101.004 20.1698 104.003 23.9124 103.032 27.7407C102.061 31.569 100.404 38.34 100.404 38.34H94.4327L96.6897 29.7691C96.6897 29.7691 97.7181 26.0837 94.8898 26.0837H91.6614L88.6616 38.3686H82.3192L84.4619 29.8549C84.4619 29.8549 85.4333 26.1123 82.7192 26.1123H79.0623L76.0339 38.3971H70.2057V38.34Z" fill="white"/>
+              <path d="M27.9234 20.17H44.7508C44.7508 20.17 51.1218 20.17 49.379 27.0267C47.922 32.7977 46.5792 38.3402 46.5792 38.3402H28.8947C24.7521 38.3402 24.4664 33.8548 24.9521 31.8835C26.0663 27.5695 27.9234 20.17 27.9234 20.17ZM42.0081 33.2548L43.8651 26.0839H32.923L31.1231 33.2548H42.0081Z" fill="white"/>
+            </svg>
+            <p class="footertext">
+              <b>Corman SpA</b><br>
+              Via Liguria, 3 SP 40 Km 1.300
+              20084 Lacchiarella (Mi) ITALY
+            </p>
+
+            <div class="mobile-footermenu">
+              <hr>
+              <a href="#">
+                <p class="footertitle2">Garanzia Omron</p>
+              </a>
+              <hr>
+              <a href="#">
+                <p class="footertitle2">Prodotti</p>
+              </a>
+              <hr>
+              <a href="#">
+                <p class="footertitle2">Domande frequenti</p>
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-md-2 offset-md-4 order-md-2 order-3">
+            <p class="footertitle">contatti</p>
+            <p class="footertext">Tel. +39 02 9008097</p>
+            <p class="footertext">Fax +39 02 90079048</p>
+            <p class="footertext">info@corman.it</p>
+          </div>
+          
+          <div class="col-md-2 offset-md-1 order-md-3 order-2">
+            <p class="footertitle">social</p>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgspacing">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.067C0 18.033 4.333 22.994 10 24V15.333H7V12H10V9.333C10 6.333 11.933 4.667 14.667 4.667C15.533 4.667 16.467 4.8 17.333 4.933V8H15.8C14.333 8 14 8.733 14 9.667V12H17.2L16.667 15.333H14V24C19.667 22.994 24 18.034 24 12.067C24 5.43 18.6 0 12 0C5.4 0 0 5.43 0 12.067Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgspacing">
+                <path d="M12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM9.0625 16.9738H6.6325V9.15375H9.0625V16.9738ZM7.8325 8.19375C7.065 8.19375 6.56875 7.65 6.56875 6.9775C6.56875 6.29125 7.08 5.76375 7.86375 5.76375C8.6475 5.76375 9.1275 6.29125 9.1425 6.9775C9.1425 7.65 8.6475 8.19375 7.8325 8.19375ZM17.9375 16.9738H15.5075V12.64C15.5075 11.6313 15.155 10.9462 14.2763 10.9462C13.605 10.9462 13.2063 11.41 13.03 11.8563C12.965 12.015 12.9488 12.24 12.9488 12.4638V16.9725H10.5175V11.6475C10.5175 10.6713 10.4862 9.855 10.4537 9.1525H12.565L12.6763 10.2388H12.725C13.045 9.72875 13.8288 8.97625 15.14 8.97625C16.7388 8.97625 17.9375 10.0475 17.9375 12.35V16.9738Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgspacing">
+                <path d="M12 0C5.37321 0 0 5.37321 0 12C0 18.6268 5.37321 24 12 24C18.6268 24 24 18.6268 24 12C24 5.37321 18.6268 0 12 0ZM17.767 9.04554C17.775 9.17143 17.775 9.30268 17.775 9.43125C17.775 13.3634 14.7804 17.8929 9.30804 17.8929C7.62054 17.8929 6.05625 17.4027 4.73839 16.5589C4.97946 16.5857 5.20982 16.5964 5.45625 16.5964C6.84911 16.5964 8.12946 16.125 9.15 15.3268C7.84286 15.3 6.74464 14.4429 6.36964 13.2643C6.82768 13.3313 7.24018 13.3313 7.71161 13.2107C7.03855 13.074 6.43359 12.7084 5.99951 12.1762C5.56542 11.644 5.32898 10.9779 5.33036 10.2911V10.2536C5.72411 10.4759 6.1875 10.6125 6.67232 10.6313C6.26476 10.3596 5.93051 9.99164 5.69923 9.5599C5.46794 9.12817 5.34676 8.64603 5.34643 8.15625C5.34643 7.60179 5.49107 7.09554 5.75089 6.65625C6.49795 7.5759 7.43017 8.32806 8.48696 8.86384C9.54375 9.39961 10.7014 9.70702 11.8848 9.76607C11.4643 7.74375 12.975 6.10714 14.7911 6.10714C15.6482 6.10714 16.4196 6.46607 16.9634 7.04464C17.6357 6.91875 18.2786 6.66696 18.8518 6.32946C18.6295 7.01786 18.1634 7.59911 17.5446 7.96607C18.1446 7.90179 18.7232 7.73571 19.2589 7.50268C18.8545 8.09732 18.3482 8.625 17.767 9.04554Z" fill="white"/>
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svgspacing">
+                <path d="M14.0037 11.7913L11.1963 10.4813C10.9513 10.3675 10.75 10.495 10.75 10.7662V13.2338C10.75 13.505 10.9513 13.6325 11.1963 13.5188L14.0025 12.2087C14.2488 12.0938 14.2487 11.9063 14.0037 11.7913ZM12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 16.875C5.8575 16.875 5.75 16.3213 5.75 12C5.75 7.67875 5.8575 7.125 12 7.125C18.1425 7.125 18.25 7.67875 18.25 12C18.25 16.3213 18.1425 16.875 12 16.875Z" fill="white"/>
+              </svg>
+            </a>
+
+           <hr class="mobile-footerbar2">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid footer2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <p class="footertitle">© copyright 2021 Corman SpA</p>
+          </div>
+          <div class="col-md-1 offset-md-4">
+            <a href="#">
+              <p class="footertitle">Privacy</p>
+            </a>
+          </div>
+          <div class="col-md-1 offset-md-1">
+            <a href="#">
+              <p class="footertitle">Cookie</p>
+            </a>
+          </div>
+          <div class="col-md-2 offset-md-1">
+            <a href="#">
+              <p class="footertitle">Termini e condizioni</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
