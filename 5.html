@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it" style="background-color:rgb(250, 71, 0)">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name = "description" content = "Planet LTK05" />
+    <title>Planet LTK05</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+    <style>
+        #preloader{
+            position: fixed;
+            z-index: 100000;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(250, 71, 0);
+        }
+
+        .loader{
+            border: 5px solid rgb(250, 71, 0);
+            border-top: 5px solid #000000;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <script type="module" crossorigin src="/assets/planet5.e324c605.js"></script>
+    <link rel="modulepreload" href="/assets/strega_bg.a0dc8f16.js">
+    <link rel="modulepreload" href="/assets/Lensflare.fbfcbbf5.js">
+    <link rel="stylesheet" href="/assets/strega_bg.0a813d4f.css">
+  </head>
+  
+  <body style="overflow-x: hidden;">
+    
+    
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        if(sessionStorage.getItem("img")){
+            document.getElementById("preloader").style.backgroundImage = "url(" + sessionStorage.getItem("img") + ")";
+        }
+    </script>
+
+    <section id="mobile" class="mobile">
+        <div class="manual row text__body-s" id="mobile-control">
+            <div class="centered col-12 mobile-btn" id="esc" style="display: none">
+                <span>X</span>
+            </div>
+            <div class="centered col-12 mobile-btn" id="avanti">
+                
+            </div>
+            <div class="centered col-12 mobile-btn" id="indietro">
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <div id="planet0" class="planet__panel reduce">
+        <h1>First Totem</h1> 
+        <p class="text__body-l">Imagine a real product or a service that you can buy or read about here!</p>
+    </div>
+    <div id="planet1" class="planet__panel reduce">
+        <h1>Third Totem</h1>
+        <p class="text__body-l">Imagine a real product or a service that you can buy or read about here!</p>
+    </div>
+    <div id="planet2" class="planet__panel reduce centered">
+        <h1>Your spaceship</h1>
+        <p class="text__body-l">Use your ship to fly back to space</p>
+        <a href="/">
+            <button class="margin-vertical-l spaceButton-inverse">
+                take off
+            </button>
+        </a>
+    </div>
+    <div id="planet3" class="planet__panel reduce">
+        <h1>Second Totem</h1>
+        <p class="text__body-l">Imagine a real product or a service that you can buy or read about here!</p>
+    </div>
+
+    <div class="crossair__container display" id="crossair">
+        <div class="crossair">
+            <p class="interaction" id="crossair-text">
+                click
+            </p>
+        </div>
+    </div>
+
+    <div class="manual row text__body-s" id="commandList">
+        <div class="centered col-12">
+            <p>Press <kbd>C</kbd> to show command</p>
+        </div>
+        <div class="manual-1 col-6">
+            <p>
+                Press <kbd>W</kbd> and <kbd>S</kbd> to <b>move</b><br>
+                <br>
+                Press <kbd>E</kbd> to <b>speed</b> up<br>
+                <br>
+                Press <kbd>Q</kbd> to <b>exit</b>
+            </p>
+        </div>
+        <div class="manual-2 col-6">
+            <p>
+                Use the mouse to <b>Move</b><br>
+                <br>
+                <b>collide</b> to score<br>
+                <br>
+                Go up the <b>space</b> to take off
+            </p>
+        </div>
+    </div>
+
+    <section class="punteggio">
+        <h2 id="punteggio" style="font-family: 'Silkscreen', cursive;">
+            0
+        </h2>
+    </section>
+
+    <section id="blocker">
+        <div id="instructions" class="row">
+            <div class="col-6 menu" id="menu">
+                <h1>Planet Ltk05</h1>
+                <p class="text__body-l">
+                    Look around freely<br>
+                    or<br>
+                    Fly up to return to space
+                </p>
+
+                <h3>Chose the difficulty</h3>
+                <div class="btn-chooser">
+                    <button id="diff1" class="diffBtn" style="border-color: green;">Default</button>
+                    <button id="diff2" class="diffBtn">Difficult</button>
+                    <button id="diff3" class="diffBtn">Extreme</button>
+                </div>
+
+                <h3>Chose the graphic quality</h3>
+                <div class="btn-chooser">
+                    <button id="graph1" class="diffBtn">Low</button>
+                    <button id="graph2" class="diffBtn">High</button>
+                </div>
+                <h3 style="font-size: 18px">This planet is too dangerous to save here, your save will
+                     only contain your settings and score, not the position
+                </h3>
+                <br>
+                <div>
+                    <a id="create-save">SAVE</a>
+                    <a href="" id="download-link" style="display: none">Download save</a>
+                </div>
+            </div>
+            <div class="col-6 pause-screen" id="pause">
+                <button class="margin-vertical-l spaceButton" id="startButton">
+                    Explore
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script type="x-shader/x-vertex" id="vertexshaderB">
+
+        varying vec2 vUv;
+
+        void main() {
+
+            vUv = uv;
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshaderB">
+
+        uniform sampler2D baseTexture;
+        uniform sampler2D bloomTexture;
+
+        varying vec2 vUv;
+
+        void main() {
+
+            gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+        }
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name = "description" content = "Explore planets in the metaverse" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+        <title>Metaverse Planet</title>
+
+        <style>
+            body{
+                overflow-y: visible !important;
+            }
+            #preloader{
+                position: fixed;
+                z-index: 100000;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: #000116;
+
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .loader{
+                border: 5px solid #000116;
+                border-top: 5px solid #fefad8;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                animation: spin 2s linear infinite;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    
+      <script type="module" crossorigin src="/assets/main.293f7164.js"></script>
+      <link rel="modulepreload" href="/assets/strega_bg.a0dc8f16.js">
+      <link rel="stylesheet" href="/assets/strega_bg.0a813d4f.css">
+    </head>
+  
+    <body class="index">
+
+        <div id="preloader">
+            <div class="loader"></div>
+        </div>
+
+        <script>
+            setTimeout(function(){
+                document.getElementById("preloader").style.display = "none";
+            }, 1000);
+        </script>
+
+        
+
+        <h1 class="index__title">Metaverse Planet</h1>
+
+        <section class="index__content row width-limit">
+            <div class="col-6 centered">
+                <div class="panel centered">
+                    <h2>Insert save file</h2>
+
+                    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+                    <form class="form-container" enctype='multipart/form-data'>
+                        <div class="upload-files-container">
+                            <div class="drag-file-area">
+                                <span class="material-icons-outlined upload-icon"> file_upload </span>
+                                <p class="dynamic-message"> Drag & drop any file here </p>
+                                <label class="label"> or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
+                            </div>
+                            <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+                            <div class="file-block">
+                                <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+                                <span class="material-icons remove-file-icon">delete</span>
+                                <div class="progress-bar"> </div>
+                            </div>
+                            <button type="button" class="upload-button"> Start from save </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col-6 centered panel-start mobile-first">
+                <h2>First time here?</h2>
+                <br><br>
+                <a href="/space.html" class="spaceButton">Start</a>
+            </div>
+        </section>
+
+        <section class="row width-limit index__info">
+            <div class="col-2"></div>
+            <div class="col-8 centered">
+                <br><br>
+                <h2>How this website work?</h2>
+                <br>
+                <div class="cardbox">
+                    <p class="card">If is your first time here pressing the <b>start</b> button you will start your exploration of a <b>solar sistem</b> where you can move around with your mouse and keyboard 
+                        <br>
+                        <br>
+                        - <kbd>W</kbd> to go forward, <kbd>S</kbd> to go backward<br>
+                        - if you are close enough to a planet you can open it's detail with a <b>click</b><br>
+                        - if you go even nearer you can <b>land</b> on it (at the moment only on planet 1,2 and 5).
+                        <br>
+                        <br>
+                        Each <b>planet</b> it's different and you can exlore them with the same command and <b>interact</b> with the object you go nearby.
+                        <br>
+                        <br>
+                        The <b>save system</b> work creating a screenshot that contain all the information needed to recreate the environment of when you have saved through 
+                        <a href="https://github.com/Freder211/Strega">steganography</a>, <b>uploading</b> the save photo will make you go back exactly where you was before leaving, 
+                        saving the settings and the score where needed.
+                        <br>
+                        <br>
+                        And now stop wasting time, start <b>exploring!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </section>
+
+        <div class="index-saveimg" id="saveimg"></div>
+
+        
+
+    </body>
+
+</html>
