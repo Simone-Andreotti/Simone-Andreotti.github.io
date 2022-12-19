@@ -15,6 +15,21 @@
             body{
                 overflow-y: visible !important;
             }
+
+            body::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            body::-webkit-scrollbar-track {
+                background: linear-gradient(0deg , #1132b483, #0d174100);
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background-color: #fff282;
+                border-radius: 20px;
+                border: 2px solid #0d1741;
+            }
+
             #preloader{
                 position: fixed;
                 z-index: 100000;
@@ -31,6 +46,9 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
+
+                opacity: 1;
+                transition: opacity .3s ease-in-out;
             }
 
             .loader{
@@ -49,7 +67,7 @@
     
       <script type="module" crossorigin src="/assets/main.293f7164.js"></script>
       <link rel="modulepreload" href="/assets/strega_bg.a0dc8f16.js">
-      <link rel="stylesheet" href="/assets/strega_bg.0a813d4f.css">
+      <link rel="stylesheet" href="/assets/strega_bg.0a6404d1.css">
     </head>
   
     <body class="index">
@@ -59,9 +77,17 @@
         </div>
 
         <script>
-            setTimeout(function(){
+             setTimeout(function(){
+                document.getElementById("preloader").style.opacity = "0";
+
+                setTimeout(function(){
                 document.getElementById("preloader").style.display = "none";
-            }, 1000);
+                }, 300);
+            }, 1300);
+        </script>
+
+        <script>
+
         </script>
 
         
